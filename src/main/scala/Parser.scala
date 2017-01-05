@@ -55,10 +55,9 @@ object ExcelReader {
 
 // Implementation
 
-/** Exception to throw if something goes wrong during CSV parsing */
 class ExcelException(s: String) extends RuntimeException(s)
 
-/** Trait for types that can be serialized to/deserialized from CSV */
+/** Trait for types that can be serialized to/deserialized from Excel */
 trait ExcelConverter[S, T] {
   def from(s: S): Try[T]
 
