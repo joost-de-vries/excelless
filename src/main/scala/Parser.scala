@@ -68,6 +68,7 @@ trait ExcelConverter[S, T] {
   //  def to(t: T): String
 }
 
+/** Instances of the ExcelConverter trait */
 object ExcelConverter {
   def apply[S, T](implicit st: Lazy[ExcelConverter[S, T]]): ExcelConverter[S, T] = st.value
 
